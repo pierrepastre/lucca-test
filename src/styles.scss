@@ -1,1 +1,223 @@
 /* You can add global styles to this file, and also import other style files */
+@import './assets/sass/variables';
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,300&display=swap');
+/*****************
+reset
+*****************/
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  font-size: 100%;
+}
+
+body {
+  font: 1rem/1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: normal;
+  word-wrap: break-word;
+  font-kerning: normal;
+  -moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+  -ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+  -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+  font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+  width: 100%;
+  height: 100%;
+  color: $color-dark;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  line-height: 1.2em;
+  letter-spacing: -0.01em;
+  text-rendering: optimizeLegibility;
+}
+ul,
+ol {
+  list-style-position: outside;
+  list-style-image: none;
+}
+
+input,
+button {
+  border: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+  }
+  input,
+  textarea,
+  select {
+    min-height: 3em;
+    padding: 1em;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+    box-shadow: none;
+    outline: 0;
+    transition: border-color 0.2s;
+    width: 100%;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #333;
+    &:focus {
+      border-bottom-color: $color-info;
+      box-shadow: 0 1px 0 0 $color-info;
+    }
+  }
+  select {
+    border-right: 1rem solid transparent;
+  }
+  button {
+    cursor: pointer;
+    padding: 1em;
+    font-size: 1.3em;
+    width: auto;
+    background-color: $color-success;
+    color: #fff;
+    border: 0;
+    border-radius: 0.25em;
+    box-shadow: 1px 1px 1px 0 rgb(0 0 0 / 10%);
+    &:hover {
+      transition: all 0.1s ease-in-out;
+      background-color: darken($color-success, 1%);
+    }
+  }
+}
+
+/*****************
+Main
+*****************/
+body {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  height: 100vh;
+}
+
+#mainPage {
+  position: relative;
+  width: 375px;
+  min-height: 80vh;
+  margin: 0 auto;
+  overflow: hidden;
+
+  background-color: $color-light;
+  border-radius: 0.5em;
+  box-shadow: 1px 1px 1px 0 rgb(0 0 0 / 10%);
+
+  > header {
+    display: grid;
+    grid-template-columns: 1fr 1rem;
+    gap: 1rem;
+    align-items: center;
+    padding: $gutter;
+
+    h1 {
+      text-transform: uppercase;
+    }
+    > span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+      cursor: pointer;
+
+      font-size: 1.5rem;
+      font-weight: 100;
+      color: #2ecc71;
+      background-color: #ebe6e6;
+      border-radius: 50%;
+    }
+  }
+  > main {
+    padding: $gutter calc($gutter / 2);
+
+    .counts {
+      padding: calc($gutter / 2);
+      > div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: calc($gutter / 2);
+      }
+    }
+  }
+  > footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: $gutter;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+    border-top: 1px solid rgba(#000, 0.15);
+    background-color: $color-light_alt;
+
+    &.active {
+      transform: translateY(0);
+    }
+    .close {
+      display: block;
+      position: absolute;
+      top: 1em;
+      right: 1em;
+      cursor: pointer;
+    }
+    > expense-form {
+      padding-top: 1em;
+      display: block;
+    }
+    .toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1em 0 0;
+      > span {
+        color: $color-info;
+        cursor: pointer;
+        font-size: 0.9em;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      > span:first-child {
+        color: #999;
+        &:hover {
+          color: $color-danger;
+        }
+      }
+      &.editMode {
+        > span:last-child {
+          color: $color-danger;
+        }
+      }
+    }
+  }
+}

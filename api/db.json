@@ -1,0 +1,84 @@
+{
+  "expenseItems": [
+    {
+      "id": "727212a0-4d73-4615-bd23-d7df6f562491",
+      "purchasedOn": "2018-12-04",
+      "nature": "Restaurant",
+      "originalAmount": {
+        "amount": 17,
+        "currency": "GBP"
+      },
+      "convertedAmount": {
+        "amount": 19.054024,
+        "currency": "EUR"
+      },
+      "comment": "Mission de 5 jours à Londres",
+      "createdAt": "2018-12-05T14:00:34.435154Z",
+      "lastModifiedAt": "2022-12-02T09:06:07.271Z"
+    },
+    {
+      "purchasedOn": "2022-11-09",
+      "nature": "restau",
+      "comment": "Un peu court ...",
+      "originalAmount": {
+        "amount": 74,
+        "currency": "EUR"
+      },
+      "createdAt": "2022-11-29T14:19:19.486Z",
+      "lastModifiedAt": "2022-12-02T09:05:45.278Z",
+      "id": "0ce4c49c-18a7-4800-8eb8-f7f00f768d81",
+      "convertedAmount": {
+        "amount": 74,
+        "currency": "EUR"
+      }
+    },
+    {
+      "purchasedOn": "2019-02-07",
+      "nature": "steak frite",
+      "comment": "Une seule frite c'est insuffisant.",
+      "originalAmount": {
+        "amount": 88,
+        "currency": "EUR"
+      },
+      "convertedAmount": {
+        "amount": 88,
+        "currency": "EUR"
+      },
+      "createdAt": "2022-12-01T15:39:28.422Z",
+      "lastModifiedAt": "2022-12-01T23:17:46.546Z",
+      "id": "1bf230bb-6ab3-4bfb-b587-31cd0c4af7f2"
+    },
+    {
+      "purchasedOn": "2022-11-30",
+      "nature": "Soupe miso",
+      "comment": "Un peu cher",
+      "originalAmount": {
+        "amount": 653,
+        "currency": "CHF"
+      },
+      "convertedAmount": {
+        "amount": 663.8601,
+        "currency": "EUR"
+      },
+      "createdAt": "2022-12-01T22:33:41.754Z",
+      "lastModifiedAt": "2022-12-01T23:35:01.482Z",
+      "id": "892cf865-2475-41ef-a4b7-ef481813b9c2"
+    },
+    {
+      "purchasedOn": "2022-11-28",
+      "nature": "fish and chips",
+      "comment": "Pas la moindre chips, je suis déçu.",
+      "originalAmount": {
+        "amount": 8,
+        "currency": "GBP"
+      },
+      "convertedAmount": {
+        "amount": 9.248329,
+        "currency": "EUR"
+      },
+      "createdAt": "2022-12-02T08:47:45.180Z",
+      "lastModifiedAt": "2022-12-02T08:47:45.180Z",
+      "id": "fb93faf4-6238-4806-959e-c6beba08c59c"
+    }
+  ]
+}
